@@ -1,8 +1,14 @@
 const { Response } = require('../../db/models');
 
 class ResponseService {
-  static async getOne({ questionId }) {
-    const ArrResForOneQest = await Response.findOne({ questionId });
+  static async getOne({ themeId, questionId }) {
+    const ArrResForOneQest = await Response.findOne({
+      where: {
+        themeId,
+        questionId,
+      },
+    });
+    console.log(questionId, themeId);
     return ArrResForOneQest;
   }
 }

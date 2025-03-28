@@ -4,10 +4,15 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     const answerOptions = [
-      { response: ['Паразиты', '1917', 'Джокер', 'Однажды в Голливуде'], questionId: 1 },
+      {
+        response: ['Паразиты', '1917', 'Джокер', 'Однажды в Голливуде'],
+        questionId: 1,
+        themeId: 1,
+      },
       {
         response: ['Леонардо ДиКаприо', 'Брэд Питт', 'Джонни Депп', 'Том Хэнкс'],
         questionId: 2,
+        themeId: 1,
       },
       {
         response: [
@@ -17,9 +22,10 @@ module.exports = {
           'Стэнли Кубрик',
         ],
         questionId: 3,
+        themeId: 1,
       },
-      { response: ['1994', '1990', '1985', '2000'], questionId: 4 },
-      { response: ['Лэсси', 'Белль', 'Тото', 'Линди'], questionId: 5 },
+      { response: ['1994', '1990', '1985', '2000'], questionId: 4, themeId: 1 },
+      { response: ['Лэсси', 'Белль', 'Тото', 'Линди'], questionId: 5, themeId: 1 },
 
       {
         response: [
@@ -28,20 +34,28 @@ module.exports = {
           'Another One Bites the Dust',
           'I Want to Break Free',
         ],
-        questionId: 6,
+        questionId: 1,
+        themeId: 2,
       },
       {
         response: ['Ed Sheeran', 'Sam Smith', 'Taylor Swift', 'Bruno Mars'],
-        questionId: 7,
+        questionId: 2,
+        themeId: 2,
       },
       {
         response: ['Мик Джаггер', 'Кит Ричардс', 'Ронни Вуд', 'Чарли Уотс'],
-        questionId: 8,
+        questionId: 3,
+        themeId: 2,
       },
-      { response: ['Майкл Джексон', 'Принс', 'Мадонна', 'Уитни Хьюстон'], questionId: 9 },
+      {
+        response: ['Майкл Джексон', 'Принс', 'Мадонна', 'Уитни Хьюстон'],
+        questionId: 4,
+        themeId: 2,
+      },
       {
         response: ['Yesterday', 'Hey Jude', 'Let It Be', 'Come Together'],
-        questionId: 10,
+        questionId: 5,
+        themeId: 2,
       },
 
       {
@@ -51,26 +65,41 @@ module.exports = {
           'В Южной Америке',
           'В Австралии',
         ],
-        questionId: 11,
+        questionId: 1,
+        themeId: 3,
       },
-      { response: ['Пятна', 'Полосы', 'Клетки', 'Лепестки'], questionId: 12 },
+      { response: ['Пятна', 'Полосы', 'Клетки', 'Лепестки'], questionId: 2, themeId: 3 },
       {
         response: ['Да', 'Нет', 'Только по маленьким деревьям', 'Только если вынуждены'],
-        questionId: 13,
+        questionId: 3,
+        themeId: 3,
       },
-      { response: ['58 км/ч', '40 км/ч', '72 км/ч', '80 км/ч'], questionId: 14 },
-      { response: ['Мясо', 'Растения', 'Фрукты', 'Вода и соль'], questionId: 15 },
+      {
+        response: ['58 км/ч', '40 км/ч', '72 км/ч', '80 км/ч'],
+        questionId: 4,
+        themeId: 3,
+      },
+      {
+        response: ['Мясо', 'Растения', 'Фрукты', 'Вода и соль'],
+        questionId: 5,
+        themeId: 3,
+      },
 
       {
         response: ['В Кавказской', 'В Альпийской', 'В Гималайской', 'В Пиренейской'],
-        questionId: 16,
+        questionId: 1,
+        themeId: 4,
       },
-      { response: ['2', '1', '3', '4'], questionId: 17 },
-      { response: ['5642 м', '4807 м', '6995 м', '8848 м'], questionId: 18 },
-      { response: ['Россия', 'США', 'Канада', 'Китай'], questionId: 19 },
-      { response: ['Лето', 'Зима', 'Весна', 'Осень'], questionId: 20 },
+      { response: ['2', '1', '3', '4'], questionId: 2, themeId: 4 },
+      { response: ['5642 м', '4807 м', '6995 м', '8848 м'], questionId: 3, themeId: 4 },
+      { response: ['Россия', 'США', 'Канада', 'Китай'], questionId: 4, themeId: 4 },
+      { response: ['Лето', 'Зима', 'Весна', 'Осень'], questionId: 5, themeId: 4 },
 
-      { response: ['Оптическое явление', 'Звук', 'Запах', 'Ультразвук'], questionId: 21 },
+      {
+        response: ['Оптическое явление', 'Звук', 'Запах', 'Ультразвук'],
+        questionId: 1,
+        themeId: 5,
+      },
       {
         response: [
           'Из-за рассеивания солнечного света',
@@ -78,7 +107,8 @@ module.exports = {
           'Из-за загрязнения воздуха',
           'Из-за орбитальных спутников',
         ],
-        questionId: 22,
+        questionId: 2,
+        themeId: 5,
       },
       {
         response: [
@@ -87,9 +117,10 @@ module.exports = {
           'Александр Грэм Белл',
           'Джордж Вашингтон',
         ],
-        questionId: 23,
+        questionId: 3,
+        themeId: 5,
       },
-      { response: ['Юпитер', 'Земля', 'Марс', 'Венера'], questionId: 24 },
+      { response: ['Юпитер', 'Земля', 'Марс', 'Венера'], questionId: 4, themeId: 5 },
       {
         response: [
           'Твердое, жидкое, газообразное',
@@ -97,17 +128,19 @@ module.exports = {
           'Плазменное, жидкое, твердое',
           'Электрическое, жидкое, твердое',
         ],
-        questionId: 25,
+        questionId: 5,
+        themeId: 5,
       },
 
-      { response: ['Красная', 'Синяя', 'Желтая', 'Зеленая'], questionId: 26 },
+      { response: ['Красная', 'Синяя', 'Желтая', 'Зеленая'], questionId: 1, themeId: 6 },
       {
         response: ['Молния МакКуин', 'Капитан Америка', 'Тони Старк', 'Халк'],
-        questionId: 27,
+        questionId: 2,
+        themeId: 6,
       },
-      { response: ['Бэмби', 'Тотошка', 'Симба', 'Кристоф'], questionId: 28 },
-      { response: ['Крокодил', 'Заяц', 'Лисичка', 'Волк'], questionId: 29 },
-      { response: ['Симба', 'Шрам', 'Муфаса', 'Нала'], questionId: 30 },
+      { response: ['Бэмби', 'Тотошка', 'Симба', 'Кристоф'], questionId: 3, themeId: 6 },
+      { response: ['Крокодил', 'Заяц', 'Лисичка', 'Волк'], questionId: 4, themeId: 6 },
+      { response: ['Симба', 'Шрам', 'Муфаса', 'Нала'], questionId: 5, themeId: 6 },
     ];
 
     await queryInterface.bulkInsert('Responses', answerOptions, {});

@@ -22,6 +22,15 @@ module.exports = {
         allowNull: false,
         onDelete: 'CASCADE',
       },
+      themeId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Themes',
+          key: 'id',
+        },
+        allowNull: false,
+        onDelete: 'CASCADE',
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
