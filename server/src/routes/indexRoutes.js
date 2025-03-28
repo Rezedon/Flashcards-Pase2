@@ -1,12 +1,13 @@
 const indexRoutes = require('express').Router();
 
 const cardsRoutes = require('./cardsRoutes');
-// const mainRouter = require('./main.router');
+const questionRouter = require('./questionRoutes');
 
 const { formatResponse } = require('../utils/formatResponce');
 
 indexRoutes.use('/api', cardsRoutes);
-// indexRouter.use('/', mainRouter);
+indexRoutes.use('/api', questionRouter);
+indexRoutes.use('/api', responseRouter);
 
 indexRoutes.get('*', (req, res) => {
   res.status(404).json(
@@ -19,5 +20,3 @@ indexRoutes.get('*', (req, res) => {
 });
 
 module.exports = indexRoutes;
-
-

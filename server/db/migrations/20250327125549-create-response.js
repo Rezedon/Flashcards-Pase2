@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       response: {
-        type: Sequelize.STRING,
+        type: Sequelize.ARRAY(Sequelize.STRING),
         allowNull: false,
       },
       questionId: {

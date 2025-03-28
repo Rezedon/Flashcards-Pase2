@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Response.init(
     {
-      response: DataTypes.STRING,
+      response: DataTypes.ARRAY(DataTypes.STRING),
       questionId: DataTypes.INTEGER,
     },
     {
