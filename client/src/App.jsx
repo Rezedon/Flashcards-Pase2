@@ -14,6 +14,9 @@ function App() {
           <Route path='/cards/:themeId' element={<Questionpage />} />
           {/* <Route path='/auth' element={<RegistrationForm />} /> */}
           <Route path='/' element={<MainPage />} />
+          <Route path='/card/:id' element={<QuestionCard />} />
+          {/* <Route path='/auth' element={<RegistrationForm />} /> */}
+          <Route path='/cards' element={<MainPage />} />
         </Route>
       </Routes>
     </>
