@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const indexRoutes = require('./routes/indexRoutes');
 // const authRoutes = require("./routes/authRoutes");
 
 const app = express();
@@ -10,5 +11,8 @@ app.use(express.json());
 
 
 // app.use("/api/auth", authRoutes);
+
+app.use('/', indexRoutes);
+
 
 module.exports = app;
