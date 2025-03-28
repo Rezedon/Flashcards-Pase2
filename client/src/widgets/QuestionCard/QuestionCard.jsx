@@ -32,7 +32,7 @@ useEffect (() => {
     
     <Container>
     <Card>
-      <Card.Body>{questions[currentQuestion].question}</Card.Body>
+      <Card.Body>{questions[currentQuestion]?.question}</Card.Body>
       <Button>вариант ответа</Button>
     </Card>
     </Container>

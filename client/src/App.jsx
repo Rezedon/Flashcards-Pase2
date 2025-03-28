@@ -4,6 +4,7 @@ import Layout from './widgets/Layout/layout';
 
 import MainPage from './pages/MainPage';
 import Questionpage from './pages/Questionpage';
+import QuestionCard from './widgets/QuestionCard/QuestionCard';
 // import RegistrationForm from './pages/Auth';
 
 function App() {
