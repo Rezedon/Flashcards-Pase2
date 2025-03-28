@@ -9,7 +9,7 @@ export default function Layout() {
     <>
       <Container>
         <NavBar />
-        <Outlet />
+        <Outlet style={{display: 'flex'}} />
       </Container>
     </>
   )

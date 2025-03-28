@@ -1,0 +1,60 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  grid-template-rows: repeat(2, auto); /* 2 строки */
+  gap: 20px; /* Отступы между карточками */
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Стили карточки */
+.card {
+  width: 100%;
+  max-width: 300px;
+  height: 420px; /* Фиксированная высота */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Размещаем элементы равномерно */
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+/* Стили картинки */
+.card img {
+  width: 100%;
+  max-height: 180px; /* Ограничиваем высоту, но не обрезаем */
+  object-fit: contain; /* Сохраняем пропорции, но без обрезки */
+  border-radius: 8px;
+}
+
+/* Выравниваем контент */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Hover-эффект */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Для средних экранов — 2 карточки в ряд */
+@media (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+/* Для маленьких экранов — 1 карточка в ряд */
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+  }
+}
